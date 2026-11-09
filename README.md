@@ -9,10 +9,14 @@ Proje Dosya Yapısı
 
 
 YZM411-ODEV/
+
 │
 ├── main.tex             # LaTeX rapor kaynak kodu
+
 ├── main.py              # Görüntü işleme ve analiz Python betiği
+
 ├── README.md            # Proje dokümantasyonu
+
 └── sonuclar/            # Deney çıktıları ve görsel dosyaları
     ├── img_normal.jpg   # Normal ışık altında orijinal fotoğraf
     ├── img_golge.jpg    # Gölge koşulunda orijinal fotoğraf
