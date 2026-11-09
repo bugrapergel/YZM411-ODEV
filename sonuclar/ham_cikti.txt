@@ -1,0 +1,47 @@
+== Ortam ==
+python 3.13.9 | numpy 2.5.4 | opencv 5.0.0 | pandas 3.1.1 | matplotlib 3.11.2
+Esikler  RGB: (140, 130, 10) (255, 255, 110)  HSV: (18, 90, 90) (38, 255, 255)
+Dosyalar: {'normal': 'img_normal.jpg', 'golge': 'img_golge.jpg', 'lamba': 'img_lamba.jpg'}
+
+== EXIF (Adim 2c icin) ==
+normal: ExposureTime=None, FNumber=None, ISO=None, ExposureMode=None (0=otomatik,1=manuel), WhiteBalance=None (0=otomatik,1=manuel)
+golge: ExposureTime=None, FNumber=None, ISO=None, ExposureMode=None (0=otomatik,1=manuel), WhiteBalance=None (0=otomatik,1=manuel)
+lamba: ExposureTime=None, FNumber=None, ISO=None, ExposureMode=None (0=otomatik,1=manuel), WhiteBalance=None (0=otomatik,1=manuel)
+Not: Deger None ise EXIF yok demektir; kamera ayarini kendiniz not edin.
+
+== Adim 4: Sayisal yapi ==
+normal: shape=(199, 149, 3) (H,W,C), dtype=uint8, min=0, max=255
+golge: shape=(199, 149, 3) (H,W,C), dtype=uint8, min=0, max=254
+lamba: shape=(199, 149, 3) (H,W,C), dtype=uint8, min=0, max=255
+
+img[y, x, kanal] erisimi, piksel (x=32, y=111) [normal]:
+  OpenCV (BGR) : (0, 23, 30)
+  Donusturulen (RGB): (30, 23, 0)
+  Tek kanal erisimi  R = 30  G = 23  B = 0
+
+    x    y           normal          normal_5x5ort            golge           golge_5x5ort            lamba           lamba_5x5ort
+0  32  111      (30, 23, 0)  (148.0, 141.0, 104.5)  (171, 169, 127)  (160.9, 158.8, 122.5)  (249, 247, 236)  (249.5, 249.4, 241.6)
+1  86   55  (215, 212, 205)  (216.3, 213.1, 206.3)     (57, 49, 49)     (67.4, 60.2, 50.2)     (37, 39, 28)     (99.6, 99.5, 86.0)
+2  67  163  (199, 199, 201)  (195.1, 195.1, 197.1)  (150, 153, 162)  (148.3, 151.5, 160.6)  (183, 182, 177)  (183.8, 182.8, 178.2)
+
+== Adim 5: Sabit esikli maskeler ==
+OBJ_ROI RGB 5.-95. yuzdelik: [[12, 8, 0], [229, 225, 211]]
+OBJ_ROI HSV 5.-95. yuzdelik: [[19, 16, 12], [30, 255, 230]]
+
+  foto  RGB_piksel  RGB_oran_%  HSV_piksel  HSV_oran_%
+normal         263        0.89         616        2.08
+ golge         750        2.53        1428        4.82
+ lamba         528        1.78         991        3.34
+NOT: Maske alan orani dogruluk olcutu DEGILDIR; yalnizca esigi gecen piksel oranidir.
+
+== Adim 6: Parlaklik ve gama (normal fotograf) ==
+Orijinal ortalama: 158.63
+b=+40: beklenen ort ~ 198.63 | olculen 198.38 | 255'te kirpilan %: 2.34
+gama=0.5: olculen ort 195.87  (gama<1 aydinlatir, gama>1 karartir)
+gama=2.0: olculen ort 111.94  (gama<1 aydinlatir, gama>1 karartir)
+Kontrol: 64 -> gama0.5: 127.7 | gama2.0: 16.1
+
+== Adim 7: 1/4 kucultme ==
+Kesit 68x28 -> 17x7
+MSE (orijinal vs buyutulmus)  NEAREST: 4372.8 | AREA: 1943.3
+NOT: MSE okunabilirligin tek olcusu degildir; gorsel yorum da yazin.

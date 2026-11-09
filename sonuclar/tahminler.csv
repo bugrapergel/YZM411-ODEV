@@ -1,0 +1,6 @@
+deney,tahmin
+Deney5_renk_esikleri,Isik yonu ve golge degistiginde piksel parlakliklari kayacagi icin sabit RGB esiklerinin sectigi sari alan orani ciddi oranda degisecektir. HSV uzayindaki Ton (H) kanali ise aydinlatma siddetinden bagimsiz oldugu icin uc fotografta da daha tutarli maske uretecektir.
+Deney6_parlaklik_b40,Parlaklik degeri b=+40 kaydirildiginda goruntu ortalamasi yaklasik 40 birim artacaktir. Ancak defter ve bardagin beyaz kisimlarinda 255 sinirinda doyuma ulasan (kirpilan) pikseller nedeniyle gercek ortalama artisi 40'tan biraz daha dusuk olacaktir.
+Deney6_gama_0.5,Gama=0.5 donusumu ozellikle derginin koyu lacivert kisimlarini ve golgeleri acarak goruntuyu aydinlatacaktir. Bu dogrusal olmayan genisleme sonucunda piksel ortalamasi belirgin sekilde yukselecektir.
+Deney6_gama_2.0,Gama=2.0 donusumu orta ve koyu tonlari sifira dogru bastirarak goruntuyu genel olarak karartacaktir. Islem sonucunda genel piksel ortalamasi orijinal degerin altina dusecektir.
+Deney7_kucultme,"Dergi uzerindeki yazilar 1/4 oraninda kucultuldugunde ince harf detaylari kaybolacaktir. INTER_NEAREST yontemi harf kenarlarinda tirtiklanma (aliasing) yaparken, INTER_AREA yontemi komsu piksellerin ortalamasini alarak yazilari bulaniklastiracaktir."
